@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img id="logo" class="logo" src="imagenes/logo.png" alt="Logo de EGES">
+        <button id="abrir" class="abrir-menu"> ABRIR</button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu">Cerrar</button>
+            <ul class="nav-list">
+                <li><a href="1.html">HOME</a></li>
+                <li><a href="PLANYOURVISIT.html">PLAN YOUR VISIT</a></li>
+                <li><a href="SERVICE.html ">SERVICE</a></li>
+                <li><a href="ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="OFFERS.html">OFFERS</a></li>
+                <li><a href=CHAT>"chat"</a></li>
+                <a href="https://wa.me/3117408653">
+                    <img src="imagenes/wap.png" alt="WhatsApp" class="whatsapp-icon">
+                </a>
+                <a href="https://www.instagram.com/equilibriumsantarosa/">
+                    <img src="imagenes/ig.png" alt="Instagram Icon" class="instagram-icon">
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <section class="testimonials">
+        <h2 class="spaced-text">B O O K - N O W</h2>
+        <H5>CLICK ON ME </H5>
+    </section>
+
+    <div class="center">
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=4UqjbG9GvESnqgrFp4xhseDuaByxeRVBnuXO7DyeXWRUM1lMUjE3WFlYRjlCOFZPUEtUREdRNllSVy4u">
+            <img src="imagenes/lotus.png" alt="catálogo">
+           
+        </a>
+    </div>
+
+    <section class="container">
+      <h2 class="mb-4">Gestión de Citas</h2>
+
+      <form id="formCita">
+        <input type="hidden" id="citaId" value="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="fecha">Fecha</label>
+            <input type="date" class="form-control" id="fecha" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="hora">Hora</label>
+            <input type="time" class="form-control" id="hora" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="servicio">Servicio</label>
+            <input type="text" class="form-control" id="servicio" placeholder="Servicio" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar Cita</button>
+        <button type="button" class="btn btn-secondary" id="btnCancelar" style="display:none;">Cancelar</button>
+      </form>
+
+      <h3 class="">Lista de Citas</h3>
+      <table class="table" id="tablaCitas">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Servicio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+  
+    </section>
+
+    <section class="container">
+      <h2 class="text-center">Consulta Cita</h2>
+      <form action="eliminar_reserva.php" method="POST" class="p-4 rounded shadow bg-light">
+        <div class="form-group"></div>
+          <label for="email_consulta">Correo electrónico con el que reservaste:</label>
+          <input type="email" class="form-control" id="email_consulta" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <label for="fecha_consulta">Fecha de la cita:</label>
+          <input type="date" class="form-control" id="fecha_consulta" name="fecha" required>
+        </div>
+        <div class="form-group">
+          <label for="hora_consulta">Hora de la cita:</label>
+          <input type="time" class="form-control" id="hora_consulta" name="hora" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Consultar</button>
+      </form>
+    </section>
+
+    <section class="container">
+      <h2 class="text-center">Eliminar Cita</h2>
+      <form action="eliminar_reserva.php" method="POST" class="p-4 rounded shadow bg-light">
+        <div class="form-group"></div>
+          <label for="email_eliminar">Correo electrónico con el que reservaste:</label>
+          <input type="email" class="form-control" id="email_eliminar" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group"></div>
+          <label for="fecha_eliminar">Fecha de la cita:</label>
+          <input type="date" class="form-control" id="fecha_eliminar" name="fecha" required>
+        </div>
+        <div class="form-group"></div>
+          <label for="hora_eliminar">Hora de la cita:</label>
+          <input type="time" class="form-control" id="hora_eliminar" name="hora" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Eliminar Cita</button>
+      </form>
+    </section>
+
+
+<br>
+
+
+</br>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">T Y C</a> |
+                <a href="#">Política de Privacidad</a> |
+                <a href="#">Mapa del Sitio</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="imagenes/gmail-removebg-preview.png" alt="Correo"></a>
+
+                <a href="https://www.instagram.com/equilibriumsantarosa/">
+                    <img src="imagenes/ig.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/3117408653">
+                    <img src="imagenes/wap2-removebg-preview.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+     <!-- https://www.youtube.com/watch?v=Xs3cC8-5QDI&t=802s -->
+    <script>
+        const abrir = document.getElementById('abrir');
+        const cerrar = document.getElementById('cerrar');
+        const nav = document.getElementById('nav');
+
+        abrir.addEventListener('click', () => {
+            nav.style.display = 'block';  // Mostrar menú
+        });
+
+        cerrar.addEventListener('click', () => {
+            nav.style.display = 'none';  // Ocultar menú
+        });
+    </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
